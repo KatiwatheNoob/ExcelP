@@ -1,0 +1,24 @@
+<!-- fetch.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Excel File Data</title>
+</head>
+<body>
+  <h1>Data from Excel File</h1>
+  {% for table in tables %}
+    <table>
+      <thead>
+        <tr>
+          {% for title in titles %}
+            <th>{{ title }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {{ table|safe }}
+      </tbody>
+    </table>
+  {% endfor %}
+</body>
+</html>
